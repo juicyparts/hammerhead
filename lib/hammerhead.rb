@@ -1,5 +1,5 @@
 require "hammerhead/version"
-require "hammerhead/hammerhead"
+require "hammerhead"
 
 module Hammerhead
   class Error < StandardError; end
