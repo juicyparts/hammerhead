@@ -42,3 +42,17 @@ Everyone interacting in the Hammerhead project's codebases, issue trackers, chat
 ## Copyright
 
 Copyright (c) 2020 Mel Riffe. See [MIT License](LICENSE.txt) for further details.
+
+## Bundler
+
+The `TTY` Toolkit, verison 0.10.0, defines this bundler dependency:
+
+```ruby
+spec.add_dependency "bundler", "~> 1.16", "< 2.0"
+```
+
+This is currently included in `hammerhead.gemspec`. If you have newer versions installed and you don't want to uninstall them you can run the following command:
+
+```sh
+  $ bundle _1.17.3_ install
+```
