@@ -8,7 +8,7 @@ RSpec.describe Hammerhead::HarvestClient do
       config.append_path fixtures_path
       config.read
     end
-  
+
       it 'is present' do
       expect(config).not_to be_nil
     end
@@ -37,7 +37,7 @@ RSpec.describe Hammerhead::HarvestClient do
       config.append_path fixtures_path
       config.read
     end
-  
+
       it 'is present' do
       expect(config).not_to be_nil
     end
@@ -73,11 +73,11 @@ RSpec.describe Hammerhead::HarvestClient do
       before do
         config.append_path fixtures_path
       end
-  
+
       it 'returns an api client' do
         expect( subject.authenticate! ).not_to be_nil
       end
-  
+
         context 'when harvest information missing' do
         before do
           allow( config ).to receive :fetch

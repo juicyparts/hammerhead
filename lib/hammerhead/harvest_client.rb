@@ -81,7 +81,7 @@ module Hammerhead
     def new_client
       self.client = Harvest.hardy_client subdomain: subdomain, username: username, password: password
     end
-    
+
   end
 
 end
