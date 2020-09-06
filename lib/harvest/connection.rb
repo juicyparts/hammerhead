@@ -37,7 +37,7 @@ module Harvest
       end
       harvest
     rescue => e
-      Hammerhead.logger.fatal "Error:", e
+      Hammerhead.logger.fatal "Fatal:", e
     end
 
     def subdomain

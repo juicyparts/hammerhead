@@ -12,6 +12,9 @@ module Hammerhead
         @options = options
       end
 
+      # TODO: Format Table
+      # TODO: Display different table with '--all'
+      # TODO: Colorize Output
       def execute(input: $stdin, output: $stdout)
 
         clients = Harvest.connection.clients options
@@ -26,7 +29,7 @@ module Hammerhead
         output.puts "CLIENTS FOUND: #{clients.size}"
 
       rescue => e
-        output.puts "CLIENTS COMMAND ERROR: #{e}"
+        Hammerhead.logger.error "CLIENTS COMMAND ERROR:", e
       end
 
       private
