@@ -41,7 +41,9 @@ Everyone interacting in the Hammerhead project's codebases, issue trackers, chat
 
 ## Copyright
 
-Copyright (c) 2020 Mel Riffe. See [MIT License](LICENSE.txt) for further details.
+Copyright (c) 2020 Juicy Parts Software, LLC. See [MIT License](LICENSE.txt) for further details.
+
+----
 
 ## Bundler
 
@@ -56,5 +58,9 @@ This is currently included in `hammerhead.gemspec`. If you have newer versions i
 ```sh
   $ bundle _1.17.3_ install
 ```
+
+## TTY Toolkit
+
+https://ttytoolkit.org/
 
 https://www.rubydoc.info/gems/tty-config
