@@ -58,3 +58,4 @@ This is currently included in `hammerhead.gemspec`. If you have newer versions i
 ```
 
 https://www.rubydoc.info/gems/tty-config
+https://www.rubydoc.info/gems/tty-logger
