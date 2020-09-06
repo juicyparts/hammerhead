@@ -18,12 +18,33 @@ module Harvest
       harvest.account.who_am_i
     end
 
+    def week_start_day
+      authenticated_user.company.week_start_day
+    end
+
     def clients options = {}
       clients = harvest.clients.all.reject { |client| clients_to_exclude.include? client.id }
       unless options['all']
         clients = clients.select { |client| client.active == true }
       end
       clients
+    end
+
+    def client client_id
+      if digits?( client_id )
+        harvest.clients.find client_id
+      else
+        raise NotImplementedError, "Client by name is not implemented yet."
+      end
+    end
+
+    def projects_for_client client
+      return [] unless client.active?
+      harvest.reports.projects_by_client( client ).select { |project| project.active? }
+    end
+
+    def my_time_sheet_entries start_date, end_date
+      harvest.reports.time_by_user authenticated_user, start_date, end_date
     end
 
     private
@@ -54,6 +75,10 @@ module Harvest
 
     def clients_to_exclude
       Hammerhead.configuration.clients_to_exclude
+    end
+
+    def digits? input
+      input.match?(/\A\d+\Z/)
     end
 
   end

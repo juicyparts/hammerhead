@@ -65,6 +65,9 @@ https://ttytoolkit.org/
 
 https://www.rubydoc.info/gems/tty-config
 https://www.rubydoc.info/gems/tty-logger
+https://github.com/zmoazeni/harvested
+https://help.getharvest.com/api-v1/
+
 
 ## Hammerhead Commands
 
