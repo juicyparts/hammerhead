@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 RSpec.describe Harvest::Connection do
   # FIXME: Figure out a way to test Harvest API Connections that don't expose real credentials

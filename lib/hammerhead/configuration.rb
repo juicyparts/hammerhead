@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'tty-config'
 
 module Hammerhead
@@ -29,7 +31,7 @@ module Hammerhead
     end
 
     def clients_to_exclude
-      config.fetch( 'clients.exclude', default: [] )
+      config.fetch('clients.exclude', default: [])
     end
 
     private
@@ -48,6 +50,7 @@ module Hammerhead
       unless config.exist?
         raise Hammerhead::Error, "HarvestClient configuration file, '#{configuration_filename}' does not exist."
       end
+
       config.read
     end
 
@@ -66,10 +69,7 @@ module Hammerhead
           configuration_missing_messages << "'#{configuration_filename}' does not define harvest password."
         end
       end
-      unless configuration_missing_messages.empty?
-        raise Hammerhead::Error, configuration_missing_messages.join("\n")
-      end
+      raise Hammerhead::Error, configuration_missing_messages.join("\n") unless configuration_missing_messages.empty?
     end
-
   end
 end

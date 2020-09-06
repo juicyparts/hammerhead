@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'singleton'
 require 'harvested' # NOTE: support for Harvest API V1
 
@@ -24,23 +26,22 @@ module Harvest
 
     def clients options = {}
       clients = harvest.clients.all.reject { |client| clients_to_exclude.include? client.id }
-      unless options['all']
-        clients = clients.select { |client| client.active == true }
-      end
+      clients = clients.select { |client| client.active == true } unless options['all']
       clients
     end
 
     def client client_id
-      if digits?( client_id )
+      if digits?(client_id)
         harvest.clients.find client_id
       else
-        raise NotImplementedError, "Client by name is not implemented yet."
+        raise NotImplementedError, 'Client by name is not implemented yet.'
       end
     end
 
     def projects_for_client client
       return [] unless client.active?
-      harvest.reports.projects_by_client( client ).select { |project| project.active? }
+
+      harvest.reports.projects_by_client(client).select(&:active?)
     end
 
     def my_time_sheet_entries start_date, end_date
@@ -53,12 +54,10 @@ module Harvest
 
     def new_connection!
       Hammerhead.configuration.validate!
-      if harvest.nil?
-        self.harvest = Harvest.hardy_client subdomain: subdomain, username: username, password: password
-      end
+      self.harvest = Harvest.hardy_client subdomain: subdomain, username: username, password: password if harvest.nil?
       harvest
-    rescue => e
-      Hammerhead.logger.fatal "Fatal:", e
+    rescue StandardError => e
+      Hammerhead.logger.fatal 'Fatal:', e
     end
 
     def subdomain
@@ -80,6 +79,5 @@ module Harvest
     def digits? input
       input.match?(/\A\d+\Z/)
     end
-
   end
 end

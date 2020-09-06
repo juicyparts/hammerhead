@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'pry-byebug'
 
 require 'date'
@@ -16,7 +17,6 @@ module Hammerhead
       end
 
       def execute(input: $stdin, output: $stdout)
-
         connection = Harvest.connection
         output.puts "Fetching details for specified client: #{specified_client}"
         client = connection.client specified_client
@@ -38,7 +38,7 @@ module Hammerhead
         status_output = {
           hours: 0.0,
           projects: {},
-          entries: {},
+          entries: {}
         }
 
         projects.each do |project|
@@ -46,19 +46,17 @@ module Hammerhead
         end
 
         entries.each do |entry|
-          if status_output[:projects].has_key? entry.project_id
-            status_output[:hours] += entry.hours
-            project_code = status_output[:projects][entry.project_id]
-            unless status_output[:entries].has_key? project_code
-              status_output[:entries][project_code] = []
-            end
-            status_output[:entries][project_code] << entry.notes
-          end
+          next unless status_output[:projects].key? entry.project_id
+
+          status_output[:hours] += entry.hours
+          project_code = status_output[:projects][entry.project_id]
+          status_output[:entries][project_code] = [] unless status_output[:entries].key? project_code
+          status_output[:entries][project_code] << entry.notes
         end
 
-        output.puts "----------------------------------------"
+        output.puts '----------------------------------------'
         output.puts
-        output.puts "#{client.name}"
+        output.puts client.name.to_s
         output.puts
         output.puts "Status Report (week ending #{end_date.strftime('%-m/%-d/%y')})"
         output.puts
@@ -72,13 +70,13 @@ module Hammerhead
             end
           end
         else
-          output.puts "I worked 0 hours."
+          output.puts 'I worked 0 hours.'
         end
 
         output.puts
-        output.puts "----------------------------------------"
-      rescue => e
-        Hammerhead.logger.error "STATUS COMMAND ERROR:", e
+        output.puts '----------------------------------------'
+      rescue StandardError => e
+        Hammerhead.logger.error 'STATUS COMMAND ERROR:', e
       end
 
       private
@@ -87,12 +85,12 @@ module Hammerhead
 
       def configure_query_dates
         today = Date.today
-        start_of_week = Date::DAYNAMES.index( Harvest.connection.week_start_day )
+        start_of_week = Date::DAYNAMES.index(Harvest.connection.week_start_day)
         adjustment = today.wday - start_of_week
 
         case today.wday
         when 0 # Sunday
-          if start_of_week == 0
+          if start_of_week.zero?
             self.start_date = today - 7
             self.end_date = start_date + 6
           else
@@ -100,7 +98,7 @@ module Hammerhead
             self.end_date = start_date + 6
           end
         when 1 # Monday
-          if start_of_week == 0
+          if start_of_week.zero?
             self.start_date = today - adjustment
             self.end_date = start_date + adjustment
           else

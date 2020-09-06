@@ -16,31 +16,29 @@ module Hammerhead
       # TODO: Display different table with '--all'
       # TODO: Colorize Output
       def execute(input: $stdin, output: $stdout)
-
         clients = Harvest.connection.clients options
 
         output.puts "Pass the Id to the 'status' command, or enough of the name to uniquely match."
         output.puts
 
-        table = TTY::Table.new headers, data( clients )
+        table = TTY::Table.new headers, data(clients)
         output.puts table.render(:unicode)
 
         output.puts
         output.puts "CLIENTS FOUND: #{clients.size}"
-
-      rescue => e
-        Hammerhead.logger.error "CLIENTS COMMAND ERROR:", e
+      rescue StandardError => e
+        Hammerhead.logger.error 'CLIENTS COMMAND ERROR:', e
       end
 
       private
 
       def headers
-        ['Id', 'Name']
+        %w[Id Name]
       end
 
-      def data clients
+      def data(clients)
         clients.collect do |client|
-          [ client.id, client.name ]
+          [client.id, client.name]
         end
       end
     end

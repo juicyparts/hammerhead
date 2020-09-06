@@ -13,7 +13,6 @@ module Hammerhead
   class Error < StandardError; end
 
   class << self
-
     def configuration
       @configuration ||= Hammerhead::Configuration.new
     end
@@ -25,6 +24,5 @@ module Hammerhead
     def configure
       yield configuration
     end
-
   end
 end

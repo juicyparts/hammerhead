@@ -1,8 +1,7 @@
+# frozen_string_literal: true
 
 RSpec.describe Hammerhead::Configuration do
-
   describe '#validate!' do
-
     context 'missing configuration file' do
       it 'raises an Error' do
         expect { subject.validate! }.to raise_error Hammerhead::Error
@@ -18,8 +17,9 @@ RSpec.describe Hammerhead::Configuration do
 
       context 'missing harvest information' do
         before do
-          allow( config ).to receive :fetch
+          allow(config).to receive :fetch
         end
+
         it 'raises an Error' do
           expect { subject.validate! }.to raise_error Hammerhead::Error
         end
@@ -27,8 +27,9 @@ RSpec.describe Hammerhead::Configuration do
 
       context 'missing harvest subdomain' do
         before do
-          allow( subject ).to receive :subdomain
+          allow(subject).to receive :subdomain
         end
+
         it 'raises an Error' do
           expect { subject.validate! }.to raise_error Hammerhead::Error
         end
@@ -36,8 +37,9 @@ RSpec.describe Hammerhead::Configuration do
 
       context 'missing harvest username' do
         before do
-          allow( subject ).to receive :username
+          allow(subject).to receive :username
         end
+
         it 'raises an Error' do
           expect { subject.validate! }.to raise_error Hammerhead::Error
         end
@@ -45,15 +47,14 @@ RSpec.describe Hammerhead::Configuration do
 
       context 'missing harvest password' do
         before do
-          allow( subject ).to receive :password
+          allow(subject).to receive :password
         end
+
         it 'raises an Error' do
           expect { subject.validate! }.to raise_error Hammerhead::Error
         end
       end
-
     end
-
   end
 
   describe '#subdomain' do
@@ -94,5 +95,4 @@ RSpec.describe Hammerhead::Configuration do
       expect(subject.password).to eq 'SET_ME'
     end
   end
-
 end
