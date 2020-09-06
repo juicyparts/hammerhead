@@ -1,3 +1,5 @@
 --format documentation
 --color
 --require spec_helper
+--require ambient_spec
+--format AmbientDocumentationFormatter

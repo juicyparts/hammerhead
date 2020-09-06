@@ -9,6 +9,9 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    ambient_spec (2.0.2)
+      rspec-core (~> 3.0)
+      wavefile (= 0.6.0)
     ast (2.4.1)
     awesome_print (1.8.0)
     byebug (11.1.3)
@@ -170,12 +173,14 @@ GEM
     tty-which (0.4.2)
     unicode-display_width (1.7.0)
     unicode_utils (1.4.0)
+    wavefile (0.6.0)
     wisper (2.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  ambient_spec (~> 2.0, >= 2.0.2)
   awesome_print (~> 1.8)
   hammerhead!
   net-http-spy (~> 0.2.1)
