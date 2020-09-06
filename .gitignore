@@ -14,3 +14,7 @@ mkmf.log
 
 # rspec failure tracking
 .rspec_status
+
+# local configuration file
+# WARNING: DO NOT EVER CHECK THIS FILE IN WITH REAL CREDENTIALS!
+hammerhead.yml

@@ -56,3 +56,5 @@ This is currently included in `hammerhead.gemspec`. If you have newer versions i
 ```sh
   $ bundle _1.17.3_ install
 ```
+
+https://www.rubydoc.info/gems/tty-config

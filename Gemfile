@@ -4,8 +4,11 @@ source "https://rubygems.org"
 gemspec
 
 gem "awesome_print", "~> 1.8"
-gem "pry-awesome_print", "~> 9.6", ">= 9.6.11"
+gem "net-http-spy", "~> 0.2.1"
 gem "pry-byebug", "~> 3.9"
 gem "rake", "~> 12.0"
 gem "rake-compiler"
 gem "rspec", "~> 3.0"
+gem "rubocop", "~> 0.90.0"
+gem "rubocop-rspec", "~> 1.43", ">= 1.43.2"
+gem "rubocop-performance", "~> 1.8"
