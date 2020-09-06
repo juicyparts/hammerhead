@@ -37,9 +37,6 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    pry-awesome_print (9.6.11)
-      awesome_print (>= 1.1.0, < 999)
-      pry (>= 0.9.0, < 999)
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
@@ -159,7 +156,6 @@ DEPENDENCIES
   awesome_print (~> 1.8)
   hammerhead!
   net-http-spy (~> 0.2.1)
-  pry-awesome_print (~> 9.6, >= 9.6.11)
   pry-byebug (~> 3.9)
   rake (~> 12.0)
   rake-compiler
