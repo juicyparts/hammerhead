@@ -28,6 +28,10 @@ module Hammerhead
       harvest_configuration['password']
     end
 
+    def clients_to_exclude
+      config.fetch( 'clients.exclude', default: [] )
+    end
+
     private
 
     attr_writer :config

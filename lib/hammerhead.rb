@@ -1,6 +1,5 @@
 require 'hammerhead'
 require 'hammerhead/configuration'
-require 'hammerhead/harvest_client'
 require 'hammerhead/version'
 
 require 'harvest'

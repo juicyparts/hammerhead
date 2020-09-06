@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'tty-table'
-require "hammerhead"
+require 'hammerhead'
 require_relative '../command'
 
 module Hammerhead
@@ -14,9 +14,7 @@ module Hammerhead
 
       def execute(input: $stdin, output: $stdout)
 
-        harvest = Hammerhead::HarvestClient.new
-        harvest.authenticate!
-        clients = harvest.clients options
+        clients = Harvest.connection.clients options
 
         output.puts "Pass the Id to the 'status' command, or enough of the name to uniquely match."
         output.puts

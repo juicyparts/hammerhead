@@ -18,6 +18,14 @@ module Harvest
       harvest.account.who_am_i
     end
 
+    def clients options = {}
+      clients = harvest.clients.all.reject { |client| clients_to_exclude.include? client.id }
+      unless options['all']
+        clients = clients.select { |client| client.active == true }
+      end
+      clients
+    end
+
     private
 
     attr_accessor :harvest
@@ -42,6 +50,10 @@ module Harvest
 
     def password
       Hammerhead.configuration.password
+    end
+
+    def clients_to_exclude
+      Hammerhead.configuration.clients_to_exclude
     end
 
   end
