@@ -18,7 +18,7 @@ module Hammerhead
         harvest.authenticate!
         clients = harvest.clients options
 
-        output.puts "Pass the Id to the 'status_report' command, or enough of the name to uniquely match."
+        output.puts "Pass the Id to the 'status' command, or enough of the name to uniquely match."
         output.puts
 
         table = TTY::Table.new headers, data( clients )
