@@ -76,6 +76,16 @@ Returns a list of 'active' clients, by default. Specifiy `--all` to get entire l
   $ hammerhead clients --all
 ```
 
+##### Configuration Details
+
+In `hammerhead.yml` you can specify a list of Client Ids to exclude from any client-related list. This is good for clients that don't track billable hours.
+
+```yaml
+clients:
+  exclude:
+    - <Harvest Client Id>
+```
+
 #### Subcommands
 
 N/A
