@@ -18,12 +18,24 @@ module Hammerhead
     end
 
     def authenticate!
-      validate_configuration
-      new_client
+      if client.nil?
+        validate_configuration
+        new_client
+      end
+      client
     end
 
     def authenticated_user
-      client.users.all.first
+      client.account.who_am_i
+    end
+
+    def clients options = {}
+      clients_to_exclude = config.fetch( 'clients.exclude', default: [] )
+      clients = client.clients.all.reject { |client| clients_to_exclude.include? client.id }
+      unless options['all']
+        clients = clients.select { |client| client.active == true }
+      end
+      clients
     end
 
     private
