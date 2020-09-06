@@ -64,6 +64,7 @@ This is currently included in `hammerhead.gemspec`. If you have newer versions i
 https://ttytoolkit.org/
 
 https://www.rubydoc.info/gems/tty-config
+https://www.rubydoc.info/gems/tty-logger
 
 ## Hammerhead Commands
 
