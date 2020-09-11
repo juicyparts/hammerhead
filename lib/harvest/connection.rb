@@ -6,6 +6,7 @@ require 'harvested' # NOTE: support for Harvest API V1
 module Harvest
   class Connection
     include Singleton
+    include Hammerhead::Utils
 
     ##
     # Use .instance to grab an initialied harvest connection:
@@ -74,10 +75,6 @@ module Harvest
 
     def clients_to_exclude
       Hammerhead.configuration.clients_to_exclude
-    end
-
-    def digits? input
-      input.match?(/\A\d+\Z/)
     end
   end
 end

@@ -9,6 +9,8 @@ require_relative '../command'
 module Hammerhead
   module Commands
     class Status < Hammerhead::Command
+      include Hammerhead::Utils
+
       attr_reader :options, :specified_client
       def initialize(client, options)
         @specified_client = client
@@ -17,6 +19,7 @@ module Hammerhead
       end
 
       def execute(input: $stdin, output: $stdout)
+        process_short_cut
         connection = Harvest.connection
         output.puts "Fetching details for specified client: #{specified_client}"
         client = connection.client specified_client
@@ -81,7 +84,7 @@ module Hammerhead
 
       private
 
-      attr_accessor :end_date, :start_date
+      attr_accessor :end_date, :start_date, :specified_client
 
       def configure_query_dates
         today = Date.today
@@ -108,6 +111,17 @@ module Hammerhead
         else
           self.start_date = today - adjustment
           self.end_date = start_date + adjustment
+        end
+      end
+
+      def process_short_cut
+        if options['short_cut']
+          configuration = Hammerhead.configuration
+          unless digits? specified_client
+            client = configuration.client_shortcut specified_client
+            raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
+            self.specified_client = client['id']
+          end
         end
       end
     end

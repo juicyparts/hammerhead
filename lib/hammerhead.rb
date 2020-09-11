@@ -1,5 +1,6 @@
 require 'hammerhead'
 require 'hammerhead/configuration'
+require 'hammerhead/utils'
 require 'hammerhead/version'
 
 require 'harvest'
