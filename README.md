@@ -88,6 +88,10 @@ In `hammerhead.yml` you can specify a list of Client Ids to exclude from any cli
 clients:
   exclude:
     - <Harvest Client Id>
+  shortcuts:
+    <client nick>:
+      id: '<client id>'
+      name: '<client name>'
 ```
 
 #### Subcommands

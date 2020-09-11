@@ -18,13 +18,15 @@ module Hammerhead
     end
     map %w(--version -v) => :version
 
-    desc 'status CLIENT', 'Generate status report for specified client'
+    desc 'status [OPTIONS] CLIENT', 'Generate status report for specified client'
     long_desc <<-DESC
       Generate status report for specified client.
 
       The default behavior is to query up to a week's worth of timesheet entries for the specififed CLIENT.
 
       CLIENT can either be the Id or Name of one of your Harvest Clients. Obtain this information with the 'clients' command.
+
+      It can also be a user-defined shortcut. Please see the README for details on creating shortcuts. However when used, you must pass the --short-cut flag.
 
       Start and end dates are automatically calculated. They are based on _your_ 'Start Week On' Setting.
 
@@ -37,6 +39,7 @@ module Hammerhead
       - specifying start-date causes end-date to equal "tomorrow"\n
       - specifying end-date requies the presense of start-date
     DESC
+    method_option :short_cut, aliases: '-s', type: :boolean, desc: 'CLIENT value is a user-defined short-cut'
     method_option :start_date, banner: 'YYYY-MM-DD', type: :string, desc: 'Start date of timesheet query'
     method_option :end_date, banner: 'YYYY-MM-DD', type: :string, desc: 'End date of timesheet query'
     method_option :help, aliases: '-h', type: :boolean, desc: 'Display usage information'
