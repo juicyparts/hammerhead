@@ -34,6 +34,14 @@ module Hammerhead
       config.fetch('clients.exclude', default: [])
     end
 
+    def client_shortcuts
+      config.fetch('clients.shortcuts', default: [])
+    end
+
+    def client_shortcut shortcut
+      client_shortcuts[shortcut]
+    end
+
     private
 
     attr_writer :config
