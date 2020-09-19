@@ -14,7 +14,7 @@ task default: %i[clobber spec rubocop]
 #
 require 'rdoc/task'
 
-RDoc::Task.new(:rdoc => 'rdoc', :clobber_rdoc => 'rdoc:clean', :rerdoc => 'rdoc:force') do |rdoc|
+RDoc::Task.new(rdoc: 'rdoc', clobber_rdoc: 'rdoc:clean', rerdoc: 'rdoc:force') do |rdoc|
   rdoc.title = 'Hammerhead Documentation'
   rdoc.main = 'README.md'
   rdoc.rdoc_files.include('README.md', 'CHANGELOG.md', 'CODE_OF_CONDUCT.md', 'LICENSE.txt', 'lib/**/*.rb')
