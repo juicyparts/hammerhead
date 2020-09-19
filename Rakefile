@@ -5,4 +5,4 @@ Rake.add_rakelib 'lib/tasks'
 
 RSpec::Core::RakeTask.new(:spec)
 
-task default: [:clobber, :spec]
+task default: %i[clobber spec]
