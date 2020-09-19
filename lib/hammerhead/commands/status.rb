@@ -8,17 +8,40 @@ require_relative '../command'
 
 module Hammerhead
   module Commands
+    ##
+    # Implements the +status+ command.
+    #
+    # Using a Harvest.connection and a client Id, like one obtained via the
+    # +clients+ command, this command prepares a 'status report' for display in
+    # the console.
+    #
+    # This command warns about: an inactive client, a client with no active
+    # projects, or no timesheet entries for the period specified.
+    #
+    # The output consists of the client's name, the text: 'Status Report (week
+    # ending <date>)', along with the timesheet entries returned. They are
+    # listed in project order, in entry order:
+    #   ----------------------------------------
+    #
+    #   ACME Co, Inc
+    #
+    #   Status Report (week ending 9/19/20)
+    #
+    #   I worked 0 hours.
+    #   ----------------------------------------
+    #
     class Status < Hammerhead::Command
       include Hammerhead::Utils
 
-      attr_reader :options, :specified_client
-
-      def initialize client, options
-        @specified_client = client
-        @options = options
+      def initialize client, options # :nodoc:
+        self.specified_client = client
+        self.options = options
         configure_query_dates
       end
 
+      ##
+      # :stopdoc:
+      #
       def execute input: $stdin, output: $stdout
         process_short_cut
         connection = Harvest.connection
@@ -85,7 +108,7 @@ module Hammerhead
 
       private
 
-      attr_accessor :end_date, :start_date, :specified_client
+      attr_accessor :end_date, :options, :start_date, :specified_client
 
       def configure_query_dates
         today = Date.today

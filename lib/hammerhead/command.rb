@@ -3,7 +3,7 @@
 require 'forwardable'
 
 module Hammerhead
-  class Command
+  class Command # :nodoc: all
     extend Forwardable
 
     def_delegators :command, :run

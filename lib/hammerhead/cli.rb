@@ -7,7 +7,7 @@ module Hammerhead
   # and the dispatch to various command objects
   #
   # @api public
-  class CLI < Thor
+  class CLI < Thor # :nodoc: all
     # Error raised by this runner
     Error = Class.new(StandardError)
 

@@ -6,12 +6,22 @@ require_relative '../command'
 
 module Hammerhead
   module Commands
+    ##
+    # Implements the +clients+ command.
+    #
+    # This command, using a Harvest.connection, knows how to obtain a list of clients
+    # and display them in a +TTY::Table+. It also outputs the number of clients returned.
+    #
+    # If any errors are caught, they are sent to the Hammerhead.logger.
+    #
     class Clients < Hammerhead::Command
-      attr_reader :options
-      def initialize options
-        @options = options
+      def initialize options # :nodoc:
+        self.options = options
       end
 
+      ##
+      # :stopdoc:
+      #
       # TODO: Format Table
       # TODO: Display different table with '--all'
       # TODO: Colorize Output
@@ -31,6 +41,8 @@ module Hammerhead
       end
 
       private
+
+      attr_accessor :options
 
       def headers
         %w[Id Name]
