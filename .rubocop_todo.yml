@@ -229,9 +229,3 @@ Style/PercentLiteralDelimiters:
   Exclude:
     - 'hammerhead.gemspec'
     - 'lib/hammerhead/cli.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/RedundantPercentQ:
-  Exclude:
-    - 'hammerhead.gemspec'

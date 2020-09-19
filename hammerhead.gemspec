@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Mel Riffe']
   spec.email         = ['mel@juicyparts.com']
 
-  spec.summary       = %q{Generate status reports from Harvest timesheets.}
-  spec.description   = %q{Generate status reports from Harvest timesheets. TBD...}
+  spec.summary       = 'Generate status reports from Harvest timesheets.'
+  spec.description   = 'Generate status reports from Harvest timesheets. TBD...'
   spec.homepage      = 'http://juicyparts.com/hammerhead'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
