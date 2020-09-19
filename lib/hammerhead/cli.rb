@@ -43,7 +43,7 @@ module Hammerhead
     method_option :start_date, banner: 'YYYY-MM-DD', type: :string, desc: 'Start date of timesheet query'
     method_option :end_date, banner: 'YYYY-MM-DD', type: :string, desc: 'End date of timesheet query'
     method_option :help, aliases: '-h', type: :boolean, desc: 'Display usage information'
-    def status(client)
+    def status client
       if options[:help]
         invoke :help, ['status']
       else
