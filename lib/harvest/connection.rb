@@ -32,7 +32,7 @@ module Harvest
     end
 
     def client client_id
-      raise NotImplementedError, 'Client by name is not implemented yet.' if digits?(client_id)
+      raise NotImplementedError, 'Client by name is not implemented yet.' unless digits?(client_id)
       harvest.clients.find client_id
     end
 
