@@ -15,4 +15,9 @@ gem 'rubocop', '~> 0.90.0'
 gem 'rubocop-rspec', '~> 1.43', '>= 1.43.2'
 gem 'rubocop-performance', '~> 1.8'
 
+group :metrics do
+  gem 'simplecov', '~> 0.19.0'
+  gem 'yardstick', '~> 0.9.9'
+end
+
 # bundle _1.17.3_ install
