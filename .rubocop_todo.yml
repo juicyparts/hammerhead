@@ -200,8 +200,3 @@ Style/GuardClause:
   Exclude:
     - 'lib/hammerhead/commands/status.rb'
     - 'lib/harvest/connection.rb'
-
-# Offense count: 2
-Style/IdenticalConditionalBranches:
-  Exclude:
-    - 'lib/hammerhead/commands/status.rb'

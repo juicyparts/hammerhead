@@ -95,11 +95,11 @@ module Hammerhead
         when 0 # Sunday
           if start_of_week.zero?
             self.start_date = today - 7
-            self.end_date = start_date + 6
           else
             self.start_date = today - 6
-            self.end_date = start_date + 6
           end
+          self.end_date = start_date + 6
+
         when 1 # Monday
           if start_of_week.zero?
             self.start_date = today - adjustment
