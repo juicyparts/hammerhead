@@ -12,13 +12,14 @@ module Hammerhead
       include Hammerhead::Utils
 
       attr_reader :options, :specified_client
-      def initialize(client, options)
+
+      def initialize client, options
         @specified_client = client
         @options = options
         configure_query_dates
       end
 
-      def execute(input: $stdin, output: $stdout)
+      def execute input: $stdin, output: $stdout
         process_short_cut
         connection = Harvest.connection
         output.puts "Fetching details for specified client: #{specified_client}"
@@ -93,13 +94,13 @@ module Hammerhead
 
         case today.wday
         when 0 # Sunday
-          if start_of_week.zero?
-            self.start_date = today - 7
-            self.end_date = start_date + 6
+          self.start_date = if start_of_week.zero?
+            today - 7
           else
-            self.start_date = today - 6
-            self.end_date = start_date + 6
-          end
+            today - 6
+                            end
+          self.end_date = start_date + 6
+
         when 1 # Monday
           if start_of_week.zero?
             self.start_date = today - adjustment
@@ -115,14 +116,15 @@ module Hammerhead
       end
 
       def process_short_cut
-        if options['short_cut']
-          configuration = Hammerhead.configuration
-          unless digits? specified_client
-            client = configuration.client_shortcut specified_client
-            raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
-            self.specified_client = client['id']
-          end
-        end
+        return unless options['short_cut']
+
+        configuration = Hammerhead.configuration
+
+        return if digits? specified_client
+
+        client = configuration.client_shortcut specified_client
+        raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
+        self.specified_client = client['id']
       end
     end
   end

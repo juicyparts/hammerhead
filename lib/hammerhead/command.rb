@@ -11,11 +11,8 @@ module Hammerhead
     # Execute this command
     #
     # @api public
-    def execute(*)
-      raise(
-        NotImplementedError,
-        "#{self.class}##{__method__} must be implemented"
-      )
+    def execute
+      raise NotImplementedError, "#{self.class}##{__method__} must be implemented"
     end
 
     # The external commands runner
@@ -23,7 +20,7 @@ module Hammerhead
     # @see http://www.rubydoc.info/gems/tty-command
     #
     # @api public
-    def command(**options)
+    def command **options
       require 'tty-command'
       TTY::Command.new(options)
     end
@@ -63,7 +60,7 @@ module Hammerhead
     # @see http://www.rubydoc.info/gems/tty-pager
     #
     # @api public
-    def pager(**options)
+    def pager **options
       require 'tty-pager'
       TTY::Pager.new(options)
     end
@@ -83,7 +80,7 @@ module Hammerhead
     # @see http://www.rubydoc.info/gems/tty-prompt
     #
     # @api public
-    def prompt(**options)
+    def prompt **options
       require 'tty-prompt'
       TTY::Prompt.new(options)
     end
@@ -103,7 +100,7 @@ module Hammerhead
     # @see http://www.rubydoc.info/gems/tty-which
     #
     # @api public
-    def which(*args)
+    def which *args
       require 'tty-which'
       TTY::Which.which(*args)
     end
@@ -113,7 +110,7 @@ module Hammerhead
     # @see http://www.rubydoc.info/gems/tty-which
     #
     # @api public
-    def exec_exist?(*args)
+    def exec_exist? *args
       require 'tty-which'
       TTY::Which.exist?(*args)
     end

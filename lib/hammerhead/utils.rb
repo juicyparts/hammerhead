@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hammerhead
   module Utils
 
@@ -5,6 +6,5 @@ module Hammerhead
       input.match?(/\A\d+\Z/)
     end
 
-    module_function :digits?
   end
 end

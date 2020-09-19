@@ -16,7 +16,7 @@ module Hammerhead
       require_relative 'version'
       puts "v#{Hammerhead::VERSION} Hammerhead 🦈"
     end
-    map %w(--version -v) => :version
+    map %w[--version -v] => :version
 
     desc 'status [OPTIONS] CLIENT', 'Generate status report for specified client'
     long_desc <<-DESC
@@ -43,7 +43,7 @@ module Hammerhead
     method_option :start_date, banner: 'YYYY-MM-DD', type: :string, desc: 'Start date of timesheet query'
     method_option :end_date, banner: 'YYYY-MM-DD', type: :string, desc: 'End date of timesheet query'
     method_option :help, aliases: '-h', type: :boolean, desc: 'Display usage information'
-    def status(client)
+    def status client
       if options[:help]
         invoke :help, ['status']
       else
@@ -62,7 +62,7 @@ module Hammerhead
     DESC
     method_option :all, aliases: '-a', type: :boolean, desc: 'Return all clients from Harvest'
     method_option :help, aliases: '-h', type: :boolean, desc: 'Display usage information'
-    def clients(*)
+    def clients
       if options[:help]
         invoke :help, ['clients']
       else

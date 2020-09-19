@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'hammerhead'
 require 'hammerhead/configuration'
 require 'hammerhead/utils'
