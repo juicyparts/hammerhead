@@ -242,16 +242,3 @@ Style/RedundantPercentQ:
 # SupportedStyles: use_perl_names, use_english_names
 Style/SpecialGlobalVars:
   EnforcedStyle: use_perl_names
-
-# Offense count: 43
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'Rakefile'
-    - 'bin/console'
-    - 'hammerhead.gemspec'
-    - 'lib/hammerhead/version.rb'
-    - 'spec/lib/hammerhead_spec.rb'
-    - 'spec/spec_helper.rb'

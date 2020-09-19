@@ -17,6 +17,12 @@ Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses_except_multiline
 
 # Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
+# SupportedStyles: single_quotes, double_quotes
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+    # Cop supports --auto-correct.
 # Configuration parameters: MinSize.
 # SupportedStyles: percent, brackets
 Style/SymbolArray:
