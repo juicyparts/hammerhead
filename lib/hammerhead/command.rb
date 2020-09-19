@@ -11,7 +11,7 @@ module Hammerhead
     # Execute this command
     #
     # @api public
-    def execute(*)
+    def execute *
       raise(
         NotImplementedError,
         "#{self.class}##{__method__} must be implemented"

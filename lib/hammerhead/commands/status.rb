@@ -12,13 +12,14 @@ module Hammerhead
       include Hammerhead::Utils
 
       attr_reader :options, :specified_client
-      def initialize(client, options)
+
+      def initialize client, options
         @specified_client = client
         @options = options
         configure_query_dates
       end
 
-      def execute(input: $stdin, output: $stdout)
+      def execute input: $stdin, output: $stdout
         process_short_cut
         connection = Harvest.connection
         output.puts "Fetching details for specified client: #{specified_client}"

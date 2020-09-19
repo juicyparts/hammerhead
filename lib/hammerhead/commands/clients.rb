@@ -8,14 +8,14 @@ module Hammerhead
   module Commands
     class Clients < Hammerhead::Command
       attr_reader :options
-      def initialize(options)
+      def initialize options
         @options = options
       end
 
       # TODO: Format Table
       # TODO: Display different table with '--all'
       # TODO: Colorize Output
-      def execute(input: $stdin, output: $stdout)
+      def execute input: $stdin, output: $stdout
         clients = Harvest.connection.clients options
 
         output.puts "Pass the Id to the 'status' command, or enough of the name to uniquely match."
@@ -36,7 +36,7 @@ module Hammerhead
         %w[Id Name]
       end
 
-      def data(clients)
+      def data clients
         clients.collect do |client|
           [client.id, client.name]
         end

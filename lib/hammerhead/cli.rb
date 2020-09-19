@@ -62,7 +62,7 @@ module Hammerhead
     DESC
     method_option :all, aliases: '-a', type: :boolean, desc: 'Return all clients from Harvest'
     method_option :help, aliases: '-h', type: :boolean, desc: 'Display usage information'
-    def clients(*)
+    def clients *
       if options[:help]
         invoke :help, ['clients']
       else
