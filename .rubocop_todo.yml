@@ -205,11 +205,3 @@ Style/GuardClause:
 Style/IdenticalConditionalBranches:
   Exclude:
     - 'lib/hammerhead/commands/status.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: literals, strict
-Style/MutableConstant:
-  Exclude:
-    - 'lib/hammerhead/version.rb'
