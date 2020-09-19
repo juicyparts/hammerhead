@@ -94,11 +94,11 @@ module Hammerhead
 
         case today.wday
         when 0 # Sunday
-          if start_of_week.zero?
-            self.start_date = today - 7
+          self.start_date = if start_of_week.zero?
+            today - 7
           else
-            self.start_date = today - 6
-          end
+            today - 6
+                            end
           self.end_date = start_date + 6
 
         when 1 # Monday
