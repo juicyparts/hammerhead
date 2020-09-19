@@ -8,4 +8,4 @@ Rake.add_rakelib 'lib/tasks'
 RSpec::Core::RakeTask.new(:spec)
 RuboCop::RakeTask.new
 
-task default: %i[clobber spec]
+task default: %i[clobber spec rubocop]
