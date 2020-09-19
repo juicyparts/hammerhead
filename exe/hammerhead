@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 lib_path = File.expand_path('../lib', __dir__)
-$LOAD_PATH.unshift(lib_path) if !$LOAD_PATH.include?(lib_path)
+$LOAD_PATH.unshift(lib_path) unless $LOAD_PATH.include?(lib_path)
 require 'hammerhead/cli'
 
 Signal.trap('INT') do

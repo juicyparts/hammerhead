@@ -213,11 +213,3 @@ Style/IdenticalConditionalBranches:
 Style/MutableConstant:
   Exclude:
     - 'lib/hammerhead/version.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: both, prefix, postfix
-Style/NegatedIf:
-  Exclude:
-    - 'exe/hammerhead'
