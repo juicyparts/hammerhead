@@ -115,14 +115,15 @@ module Hammerhead
       end
 
       def process_short_cut
-        if options['short_cut']
-          configuration = Hammerhead.configuration
-          unless digits? specified_client
-            client = configuration.client_shortcut specified_client
-            raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
-            self.specified_client = client['id']
-          end
-        end
+        return unless options['short_cut']
+
+        configuration = Hammerhead.configuration
+
+        return if digits? specified_client
+
+        client = configuration.client_shortcut specified_client
+        raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
+        self.specified_client = client['id']
       end
     end
   end
