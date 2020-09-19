@@ -10,25 +10,8 @@ RuboCop::RakeTask.new
 
 task default: %i[clobber spec rubocop]
 
-# ----- Yardstick Rake Tasks -----
+# ----- RDoc Rake Tasks -----
 #
-require 'yaml'
+require 'rdoc/task'
 
-options = YAML.load_file 'yardstick.yml'
-
-# measure coverage
-# bundle exec rake yardstick_measure
-
-require 'yardstick/rake/measurement'
-
-Yardstick::Rake::Measurement.new(:yardstick_measure, options) do |measurement|
-  measurement.output = 'doc/measurement/report.txt'
-end
-
-
-# verify coverage
-# bundle exec rake verify_measurements
-
-require 'yardstick/rake/verify'
-
-Yardstick::Rake::Verify.new(:verify_measurements, options)
+RDoc::Task.new(:rdoc => "rdoc", :clobber_rdoc => "rdoc:clean", :rerdoc => "rdoc:force")
