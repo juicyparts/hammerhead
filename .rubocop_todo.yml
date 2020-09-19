@@ -221,11 +221,3 @@ Style/MutableConstant:
 Style/NegatedIf:
   Exclude:
     - 'exe/hammerhead'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'hammerhead.gemspec'
-    - 'lib/hammerhead/cli.rb'

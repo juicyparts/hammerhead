@@ -16,7 +16,7 @@ module Hammerhead
       require_relative 'version'
       puts "v#{Hammerhead::VERSION} Hammerhead 🦈"
     end
-    map %w(--version -v) => :version
+    map %w[--version -v] => :version
 
     desc 'status [OPTIONS] CLIENT', 'Generate status report for specified client'
     long_desc <<-DESC
