@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.bindir      = 'exe'
   spec.executables = %w[hammerhead]
 
-  spec.extra_rdoc_files = Dir['README.md', 'CHANGELOG.md', 'LICENSE.txt']
+  spec.extra_rdoc_files = Dir['README.md', 'CHANGELOG.md', 'CODE_OF_CONDUCT.md', 'LICENSE.txt']
 
   spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
