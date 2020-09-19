@@ -235,10 +235,3 @@ Style/PercentLiteralDelimiters:
 Style/RedundantPercentQ:
   Exclude:
     - 'hammerhead.gemspec'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: .
-# SupportedStyles: use_perl_names, use_english_names
-Style/SpecialGlobalVars:
-  EnforcedStyle: use_perl_names
