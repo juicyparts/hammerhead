@@ -156,13 +156,6 @@ RSpec/SubjectStub:
   Exclude:
     - 'spec/lib/hammerhead/configuration_spec.rb'
 
-# Offense count: 1
-# Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
-# SupportedStyles: inline, group
-Style/AccessModifierDeclarations:
-  Exclude:
-    - 'lib/hammerhead/utils.rb'
-
 # Offense count: 8
 Style/Documentation:
   Exclude:
