@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Define Rake Tasks 'internal' to Hammerhead development
 
 def configuration_filename
