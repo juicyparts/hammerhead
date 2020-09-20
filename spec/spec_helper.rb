@@ -2,8 +2,8 @@
 require 'bundler/setup'
 require 'hammerhead'
 
+require 'amazing_print'
 require 'pry-byebug'
-require 'ap'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
