@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'ambient_spec', '~> 2.0', '>= 2.0.2'
-gem 'awesome_print', '~> 1.8'
+gem 'amazing_print', '~> 1.2', '>= 1.2.1'
 gem 'net-http-spy', '~> 0.2.1'
 gem 'pry-byebug', '~> 3.9'
 gem 'rake', '~> 12.0'
