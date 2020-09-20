@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'singleton'
-require 'harvested' # NOTE: support for Harvest API V1
+require 'harvested'
 
 module Harvest
   ##
@@ -42,7 +42,7 @@ module Harvest
     # If +client_id+ contains alpha-characters NotImplementedError is raised.
     #
     def client client_id
-      raise NotImplementedError, 'Client by name is not implemented yet.' unless digits?(client_id)
+      raise NotImplementedError, 'Client by name is not implemented yet.' unless digits? client_id
       harvest.clients.find client_id
     end
 

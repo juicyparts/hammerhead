@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry-byebug'
-
 require 'date'
 require 'hammerhead'
 require_relative '../command'
@@ -117,24 +115,19 @@ module Hammerhead
 
         case today.wday
         when 0 # Sunday
-          self.start_date = if start_of_week.zero?
-            today - 7
-          else
-            today - 6
-                            end
-          self.end_date = start_date + 6
-
+          self.start_date = start_of_week.zero? ? today - 7 : today - 6
+          self.end_date   = start_date + 6
         when 1 # Monday
           if start_of_week.zero?
             self.start_date = today - adjustment
-            self.end_date = start_date + adjustment
+            self.end_date   = start_date + adjustment
           else
             self.start_date = today - 7
-            self.end_date = start_date + 6
+            self.end_date   = start_date + 6
           end
         else
           self.start_date = today - adjustment
-          self.end_date = start_date + adjustment
+          self.end_date   = start_date + adjustment
         end
       end
 
