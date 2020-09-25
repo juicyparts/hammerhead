@@ -12,7 +12,8 @@ RuboCop::RakeTask.new do |task|
   task.requires << 'rubocop-performance'
 end
 
-task default: %i[clobber spec rubocop]
+# task default: %i[clobber spec rubocop]
+task default: %i[spec]
 
 # ----- RDoc Rake Tasks -----
 #
