@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hammerhead (0.1.0)
+    hammerhead (0.1.1)
       bundler (~> 1.16, < 2.0)
       harvested (~> 4.0)
       tty (~> 0.10.0)
