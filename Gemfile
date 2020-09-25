@@ -7,6 +7,7 @@ gemspec
 
 gem 'amazing_print', '~> 1.2', '>= 1.2.1'
 gem 'ambient_spec', '~> 2.0', '>= 2.0.2'
+gem 'coveralls', require: false
 gem 'net-http-spy', '~> 0.2.1'
 gem 'pry-byebug', '~> 3.9'
 gem 'rake', '~> 13.0'
