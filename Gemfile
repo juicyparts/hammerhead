@@ -11,7 +11,7 @@ gem 'pry-byebug', '~> 3.9'
 gem 'rake', '~> 13.0'
 gem 'rake-compiler'
 gem 'rspec', '~> 3.0'
-gem 'rubocop', '~> 0.90.0'
+gem 'rubocop', '~> 0.91'
 gem 'rubocop-rspec', '~> 1.43', '>= 1.43.2'
 gem 'rubocop-performance', '~> 1.8'
 

@@ -6,7 +6,10 @@ require 'rubocop/rake_task'
 Rake.add_rakelib 'lib/tasks'
 
 RSpec::Core::RakeTask.new(:spec)
-RuboCop::RakeTask.new
+
+RuboCop::RakeTask.new do |task|
+  task.requires << 'rubocop-performance'
+end
 
 task default: %i[clobber spec rubocop]
 
