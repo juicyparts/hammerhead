@@ -48,7 +48,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.13.0)
     rainbow (3.0.0)
-    rake (12.3.3)
+    rake (13.0.1)
     rake-compiler (1.1.1)
       rake
     regexp_parser (1.7.1)
@@ -185,7 +185,7 @@ DEPENDENCIES
   hammerhead!
   net-http-spy (~> 0.2.1)
   pry-byebug (~> 3.9)
-  rake (~> 12.0)
+  rake (~> 13.0)
   rake-compiler
   rspec (~> 3.0)
   rubocop (~> 0.90.0)
