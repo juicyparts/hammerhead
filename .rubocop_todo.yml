@@ -8,14 +8,6 @@
 
 # Offense count: 1
 # Cop supports --auto-correct.
-# Configuration parameters: TreatCommentsAsGroupSeparators, ConsiderPunctuation, Include.
-# Include: **/*.gemspec
-Gemspec/OrderedDependencies:
-  Exclude:
-    - 'hammerhead.gemspec'
-
-# Offense count: 1
-# Cop supports --auto-correct.
 Layout/ClosingHeredocIndentation:
   Exclude:
     - 'spec/integration/status_spec.rb'

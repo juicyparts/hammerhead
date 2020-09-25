@@ -37,8 +37,8 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   # NOTE: Watch for a new release of TTY, and then change these dependencies.
-  spec.add_dependency 'tty', '~> 0.10.0'
   spec.add_dependency 'bundler', '~> 1.16', '< 2.0'
+  spec.add_dependency 'tty', '~> 0.10.0'
 
   spec.add_dependency 'harvested', ['~> 4.0']
 end
