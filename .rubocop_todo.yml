@@ -7,39 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Cop supports --auto-correct.
-Layout/ClosingHeredocIndentation:
-  Exclude:
-    - 'spec/integration/status_spec.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Layout/EmptyLineAfterGuardClause:
-  Exclude:
-    - 'lib/hammerhead/commands/status.rb'
-    - 'lib/harvest/connection.rb'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-Layout/EmptyLineAfterMagicComment:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'hammerhead.gemspec'
-    - 'lib/hammerhead.rb'
-    - 'lib/tasks/hammerhead.rake'
-    - 'spec/lib/hammerhead_spec.rb'
-    - 'spec/spec_helper.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
-Layout/EmptyLinesAroundModuleBody:
-  Exclude:
-    - 'lib/hammerhead/utils.rb'
-
-# Offense count: 1
 # Configuration parameters: AllowKeywordBlockArguments.
 Lint/UnderscorePrefixedVariableName:
   Exclude:

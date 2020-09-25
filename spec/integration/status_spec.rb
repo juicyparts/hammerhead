@@ -37,7 +37,7 @@ RSpec.describe '`hammerhead status` command', type: :cli do
         - specifying start-date causes end-date to equal "tomorrow"
 
         - specifying end-date requies the presense of start-date
-      OUT
+    OUT
 
     expect(output).to eq(expected_output)
   end
