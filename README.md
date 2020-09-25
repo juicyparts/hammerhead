@@ -1,5 +1,7 @@
 # Hammerhead
 
+[![Gem Version](https://badge.fury.io/rb/hammerhead.svg)](https://badge.fury.io/rb/hammerhead)
+
 A tool to generate status reports from your Harvest timesheet.
 
 With this tool you can produce client-specific status reports from the entries you make in your Harvest timesheet.
