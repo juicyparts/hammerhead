@@ -1,6 +1,6 @@
 # Hammerhead
 
-[![Gem Version](https://badge.fury.io/rb/hammerhead.svg)](https://badge.fury.io/rb/hammerhead)
+[![Gem Version](https://badge.fury.io/rb/hammerhead.svg)](https://badge.fury.io/rb/hammerhead) [![Build Status](https://travis-ci.org/juicyparts/hammerhead.svg?branch=develop)](https://travis-ci.org/juicyparts/hammerhead) [![Coverage Status](https://coveralls.io/repos/github/juicyparts/hammerhead/badge.svg?branch=develop)](https://coveralls.io/github/juicyparts/hammerhead?branch=develop)
 
 A tool to generate status reports from your Harvest timesheet.
 
