@@ -2,7 +2,7 @@
 require 'bundler/setup'
 require 'hammerhead'
 
-require 'ap'
+require 'amazing_print'
 require 'pry-byebug'
 
 RSpec.configure do |config|

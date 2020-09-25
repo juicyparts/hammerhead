@@ -8,9 +8,6 @@ require 'harvest'
 
 require 'tty-logger'
 
-require 'pry-byebug'
-require 'ap'
-
 ##
 # Wraps the functionality of the hammerhead tool. Contains the commands
 # defined, and implemented, by the +tty+ gem.

@@ -9,8 +9,16 @@ Gem::Specification.new do |spec|
   spec.email         = ['mel@juicyparts.com']
 
   spec.summary       = 'Generate status reports from Harvest timesheets.'
-  spec.description   = 'Generate status reports from Harvest timesheets. TBD...'
-  spec.homepage      = 'http://juicyparts.com/hammerhead'
+  spec.description   = %(
+    If you use Harvest for timekeeping, you can use this gem to create status
+    reports from your entries. Ensure your clients see activity that matches
+    your invoices. Use this gem to generate client-specific status reports.
+
+    As freelance developer, I provide weekly status reports to my clients. This
+    gem is my automated way of doing this through my Harvest timesheets.
+  )
+
+  spec.homepage = 'http://juicyparts.com/hammerhead'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 

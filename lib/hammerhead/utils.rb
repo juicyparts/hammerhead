@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Hammerhead
   ##
   # Contains utility-type methods available for use throughout the tool.

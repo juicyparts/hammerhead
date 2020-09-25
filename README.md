@@ -167,7 +167,7 @@ clients:
 
 Because of the `harvested` gem, and its use of Basic Authentication, you need to specify your credentials in order for the tool to authenticate itself against the Harvest V1 API. **GUARD YOUR CREDENTIALS!**
 
-There are some optional configuration items that may prove useful to you. If you have a client, for whatever reason, you wish to exclude from any and all client listings, add their Client Id to the list that is `clients.exclude`. Additionally, if you'd like an easy-to-remember nickname for one, or more, of your clients, you can define them until `clients.shortcuts`. For example:
+There are some optional configuration items that may prove useful to you. If you have a client, for whatever reason, you wish to exclude from any and all client listings, add their Client Id to the list that is `clients.exclude`. Additionally, if you'd like an easy-to-remember nickname for one, or more, of your clients, you can define them under `clients.shortcuts`. For example:
 
 ```yaml
 clients:
