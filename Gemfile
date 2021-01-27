@@ -15,6 +15,6 @@ gem 'rake-compiler'
 gem 'rspec', '~> 3.10'
 gem 'rubocop', '~> 0.91'
 gem 'rubocop-performance', '~> 1.9'
-gem 'rubocop-rspec', '~> 1.43', '>= 1.43.2'
+gem 'rubocop-rspec', '~> 1.44'
 
 # bundle _1.17.3_ install
