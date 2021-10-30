@@ -34,14 +34,6 @@ password: - Your Harvest password
 
 [TTY Toolkit](https://ttytoolkit.org/) provides the skeleton around which Hammerhead is built. It's a wonderfully easy toolkit to use. I'm barely scratching the surface of its capabilities.
 
-**WARNING**: As of version `'0.10.0'` there is a dependency on an old version of Bundler. Bundler version `1.17.3` works fine. I bring this up because you will receive warnings/errors when trying to use newer versions. When `tty` upgrades I will update this tool. Until then run bundler like so:
-
-```sh
-$ bundle _1.17.3_ <command>
-```
-
-Because of this specific dependency on `bundler` through `tty` I have elected to replicate the dependecy requirement in Hammerhead's gemspec.
-
 ## Installation
 
 Add this line to your application's Gemfile:
