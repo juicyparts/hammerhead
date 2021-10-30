@@ -19,3 +19,6 @@ mkmf.log
 # WARNING: DO NOT EVER CHECK THIS FILE IN WITH REAL CREDENTIALS!
 hammerhead.yml
 hammerhead.yml.example
+
+# To allow CI to rebuild each test run
+Gemfile.lock
