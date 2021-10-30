@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in hammerhead.gemspec
 gemspec
 
-gem 'amazing_print', '~> 1.3'
+gem 'amazing_print', '~> 1.4'
 gem 'ambient_spec', '~> 2.0', '>= 2.0.2'
 gem 'coveralls', require: false
 gem 'net-http-spy', '~> 0.2.1'
