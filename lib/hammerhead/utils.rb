@@ -5,7 +5,6 @@ module Hammerhead
   # Contains utility-type methods available for use throughout the tool.
   #
   module Utils
-
     ##
     # Returns true if the specified +input+ consists of digits
     #
@@ -18,6 +17,5 @@ module Hammerhead
     def digits? input
       input.match?(/\A\d+\Z/)
     end
-
   end
 end

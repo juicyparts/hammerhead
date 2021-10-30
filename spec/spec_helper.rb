@@ -1,9 +1,13 @@
 # frozen_string_literal: true
+
 require 'bundler/setup'
 require 'hammerhead'
 
 require 'amazing_print'
 require 'pry-byebug'
+
+require 'coveralls'
+Coveralls.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

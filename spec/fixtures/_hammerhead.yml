@@ -1,0 +1,7 @@
+# Sample Configuration File
+# -------------------------------------------------------------------
+# Harvest User Credentials
+harvest:
+  subdomain: 'SET_ME'
+  username: 'SET_ME'
+  password: 'SET_ME'

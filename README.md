@@ -1,5 +1,7 @@
 # Hammerhead
 
+[![Gem Version](https://badge.fury.io/rb/hammerhead.svg)](https://badge.fury.io/rb/hammerhead) [![Build Status](https://travis-ci.org/juicyparts/hammerhead.svg?branch=develop)](https://travis-ci.org/juicyparts/hammerhead) [![Coverage Status](https://coveralls.io/repos/github/juicyparts/hammerhead/badge.svg?branch=develop)](https://coveralls.io/github/juicyparts/hammerhead?branch=develop)
+
 A tool to generate status reports from your Harvest timesheet.
 
 With this tool you can produce client-specific status reports from the entries you make in your Harvest timesheet.
@@ -31,14 +33,6 @@ password: - Your Harvest password
 ### TTY Toolkit
 
 [TTY Toolkit](https://ttytoolkit.org/) provides the skeleton around which Hammerhead is built. It's a wonderfully easy toolkit to use. I'm barely scratching the surface of its capabilities.
-
-**WARNING**: As of version `'0.10.0'` there is a dependency on an old version of Bundler. Bundler version `1.17.3` works fine. I bring this up because you will receive warnings/errors when trying to use newer versions. When `tty` upgrades I will update this tool. Until then run bundler like so:
-
-```sh
-$ bundle _1.17.3_ <command>
-```
-
-Because of this specific dependency on `bundler` through `tty` I have elected to replicate the dependecy requirement in Hammerhead's gemspec.
 
 ## Installation
 

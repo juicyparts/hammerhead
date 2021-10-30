@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe '`hammerhead status` command', type: :cli do
-  it 'executes `hammerhead help status` command successfully' do
+  xit 'executes `hammerhead help status` command successfully' do
     output = `hammerhead help status`
     expected_output = <<~OUT
       Usage:
@@ -37,7 +37,7 @@ RSpec.describe '`hammerhead status` command', type: :cli do
         - specifying start-date causes end-date to equal "tomorrow"
 
         - specifying end-date requies the presense of start-date
-      OUT
+    OUT
 
     expect(output).to eq(expected_output)
   end

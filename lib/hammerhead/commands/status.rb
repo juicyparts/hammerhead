@@ -140,6 +140,7 @@ module Hammerhead
 
         client = configuration.client_shortcut specified_client
         raise Hammerhead::Error, "Specified shortcut: '#{specified_client}' does not exist" if client.nil?
+
         self.specified_client = client['id']
       end
     end
