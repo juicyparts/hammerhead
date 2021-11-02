@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
 
   # Add TTY components
   spec.add_dependency 'tty-config', '>= 0.4', '< 0.6'
-  spec.add_dependency 'tty-logger', '~> 0.5.0'
+  spec.add_dependency 'tty-logger', '>= 0.5', '< 0.7'
   spec.add_dependency 'tty-table', '~> 0.12.0'
 
   spec.add_dependency 'harvested', ['~> 4.0']
