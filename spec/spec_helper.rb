@@ -6,6 +6,8 @@ require 'hammerhead'
 require 'amazing_print'
 require 'pry-byebug'
 
+require_relative './support/fixtures'
+
 require 'coveralls'
 Coveralls.wear!
 
@@ -23,8 +25,4 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
-end
-
-def fixtures_path
-  File.join(File.dirname(__FILE__), 'fixtures')
 end
