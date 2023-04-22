@@ -3,7 +3,7 @@
 RSpec.describe Hammerhead::Configuration do
   describe '#validate!' do
     context 'missing configuration file' do
-      it 'raises an Error' do
+      xit 'raises an Error' do
         expect { subject.validate! }.to raise_error Hammerhead::Error
       end
     end

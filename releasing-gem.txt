@@ -1,0 +1,16 @@
+These are my notes to help me release new gem versions.
+
+Essentially make all changes on the develop branch. Update VERSION. Update
+CHANGELOG. If needed update README. If needed update docs/index.md.
+
+Run rubocop and address any new violations.
+
+Run rspec and address any new test failures.
+
+Commit and push all changes. Merge changes into master.
+
+Run `rake release`. Have 2FA on hand.
+
+Make sure all changes, and tags, are pushed to Github. Merges changes into
+develop.
+

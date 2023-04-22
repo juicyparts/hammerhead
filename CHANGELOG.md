@@ -1,5 +1,21 @@
 # Hammerhead Changes
 
+## 0.1.3
+
+#### Released on 22 Apr 2023
+
+* Add `thor` dependency
+* Update `tty-config` dependency
+* Verify functionality under Ruby 3
+
+## 0.1.2
+
+#### Released on 30 Oct 2021
+
+* Updates README
+* Removes `bundler` dependency (@piotrmurach)
+* Streamlines `tty` dependencies (@piotrmurach)
+
 ## 0.1.1
 
 #### Released on 24 Sep 2020

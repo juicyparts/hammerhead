@@ -13,7 +13,7 @@ RuboCop::RakeTask.new do |task|
 end
 
 # task default: %i[clobber spec rubocop]
-task default: %i[spec]
+task default: %i[spec rubocop]
 
 # ----- RDoc Rake Tasks -----
 #
