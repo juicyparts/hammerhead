@@ -11,7 +11,6 @@ gem 'coveralls',           require: false
 gem 'net-http-spy',        '~> 0.2.1'
 gem 'pry-byebug',          '~> 3.10', '>= 3.10.1'
 gem 'rake',                '~> 13.0', '>= 13.0.6'
-gem 'rake-compiler'
 gem 'rspec',               '~> 3.12'
 gem 'rubocop',             '~> 1.50', '>= 1.50.2'
 gem 'rubocop-performance', '~> 1.17', '>= 1.17.1'
