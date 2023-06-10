@@ -1,3 +1,4 @@
+# rubocop --regenerate-todo --auto-gen-only-exclude
 require:
   - rubocop-performance
   - rubocop-rake
