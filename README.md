@@ -182,8 +182,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ### Road Map
 
-* Support date range for `status` command
 * Add template support
+* Support date range for `status` command
 * Email status report
 * Use Harvest V2 API
 
@@ -191,11 +191,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/juicyparts/hammerhead. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/juicyparts/hammerhead/blob/master/CODE_OF_CONDUCT.md).
 
-
 ## Code of Conduct
 
 Everyone interacting in the Hammerhead project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/juicyparts/hammerhead/blob/master/CODE_OF_CONDUCT.md).
 
 ## Copyright
 
-Copyright (c) 2020 Juicy Parts Software, LLC. See [MIT License](LICENSE.txt) for further details.
+Copyright (c) 2023 Juicy Parts Software, LLC. See [MIT License](LICENSE.txt) for further details.
