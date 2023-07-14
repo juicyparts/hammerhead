@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 require 'hammerhead'
+
 require 'hammerhead/report_dates'
+require 'hammerhead/status_report'
+
 require 'hammerhead/configuration'
 require 'hammerhead/utils'
 require 'hammerhead/version'
