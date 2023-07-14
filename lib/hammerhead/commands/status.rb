@@ -34,7 +34,6 @@ module Hammerhead
       def initialize client, options # :nodoc:
         self.specified_client = client
         self.options = options
-        configure_query_dates
       end
 
       ##
@@ -106,29 +105,18 @@ module Hammerhead
 
       private
 
-      attr_accessor :end_date, :options, :start_date, :specified_client
+      attr_accessor :options, :specified_client
 
-      def configure_query_dates
-        today = Date.today
-        start_of_week = Date::DAYNAMES.index(Harvest.connection.week_start_day)
-        adjustment = today.wday - start_of_week
+      def start_date
+        report_dates.start_date
+      end
 
-        case today.wday
-        when 0 # Sunday
-          self.start_date = start_of_week.zero? ? today - 7 : today - 6
-          self.end_date   = start_date + 6
-        when 1 # Monday
-          if start_of_week.zero?
-            self.start_date = today - adjustment
-            self.end_date   = start_date + adjustment
-          else
-            self.start_date = today - 7
-            self.end_date   = start_date + 6
-          end
-        else
-          self.start_date = today - adjustment
-          self.end_date   = start_date + adjustment
-        end
+      def end_date
+        report_dates.end_date
+      end
+
+      def report_dates
+        @report_dates = ReportDates.new
       end
 
       def process_short_cut
