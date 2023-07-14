@@ -45,12 +45,12 @@ module Hammerhead
       attr_accessor :options
 
       def headers
-        %w[Id Name]
+        %w[Name Id]
       end
 
       def data clients
         clients.collect do |client|
-          [client.id, client.name]
+          [client.name, client.id]
         end
       end
     end
