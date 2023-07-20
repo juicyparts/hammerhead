@@ -3,14 +3,14 @@
 require_relative 'lib/hammerhead/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'hammerhead'
-  spec.license       = 'MIT'
-  spec.version       = Hammerhead::VERSION
-  spec.authors       = ['Mel Riffe']
-  spec.email         = ['mel@juicyparts.com']
+  spec.name        = 'hammerhead'
+  spec.license     = 'MIT'
+  spec.version     = Hammerhead::VERSION
+  spec.authors     = ['Mel Riffe']
+  spec.email       = ['mel@juicyparts.com']
 
-  spec.summary       = 'Generate status reports from Harvest timesheets.'
-  spec.description   = %(
+  spec.summary     = 'Generate status reports from Harvest timesheets.'
+  spec.description = %(
     If you use Harvest for timekeeping, you can use this gem to create status
     reports from your entries. Ensure your clients see activity that matches
     your invoices. Use this gem to generate client-specific status reports.
